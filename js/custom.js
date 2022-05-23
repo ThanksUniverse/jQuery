@@ -32,6 +32,16 @@ $(document).ready(function () {
 
 	$(".featured-item img").fadeOut(1);
 	$(".featured-item img").fadeIn(1000);
+	$(".featured-item:first h4").css("color", "#f00");
+	$(".featured-item:first h4").css({
+		color: "#f00",
+		background: "#ff0",
+		border: "1px solid #fff",
+		"font-weight": "100",
+	});
+	//É possível colocar vários elementos de estilo de css pelo JavaScript com o código $('classe, id, name').css({
+
+	//})
 });
 
 /* for (let i = 0; i < titulos.length; i++) {
