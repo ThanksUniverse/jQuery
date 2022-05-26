@@ -723,3 +723,15 @@ a {
 		text-align: left;
 	}
 }
+
+/* Pedro */
+.social-icons-pedro li {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.social-icons-pedro li:hover {
+	background-color: rgb(202, 202, 202);
+	filter: brightness(110%);
+	transform: translateY(-1px);
+}
