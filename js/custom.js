@@ -70,6 +70,14 @@ $(document).ready(function () {
 
 		alert("Produto esgotado");
 	});
+
+	$(".featured-item").on("mouseenter", function (event) {
+		event.preventDefault();
+		$(this).css({
+			filter: "brightness(120%);",
+			cursor: "pointer",
+		});
+	});
 });
 
 /* for (let i = 0; i < titulos.length; i++) {
