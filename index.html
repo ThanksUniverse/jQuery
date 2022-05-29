@@ -35,10 +35,10 @@
                      <a class="nav-link" href="products.html">Produtos</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="about.html">Sobre nós</a>
+                     <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contato</a>
+                     <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
                   </li>
                </ul>
             </div>
@@ -159,7 +159,6 @@
    </article>
 
 
-
    <div class="subscribe-form">
       <div class="container">
          <div class="row">
@@ -263,6 +262,63 @@
       <!--Carregar o nosso jQuery custom depois da biblioteca-->
       <script src="./js/custom.js"></script>
    </div>
+
+
+   <!-- Modal -->
+   <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Modal title</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <div id="contato" class="visually-hidden">
+
+      <form action="" class="form">
+
+         <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome"
+               aria-describedby="helpNome">
+            <small id="helpNome" class="text-muted">Digite um nome válido</small>
+         </div>
+
+         <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="text" name="Email" id="Email" class="form-control" placeholder="Digite seu Email"
+               aria-describedby="helpEmail">
+            <small id="helpEmail" class="text-muted">Digite um Email válido</small>
+         </div>
+
+         <div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+         </div>
+
+      </form>
+
+   </div>
+
+
+   <div id="sobre">
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi debitis iure sed aspernatur dolor
+         perspiciatis. Vitae adipisci similique neque assumenda a, ipsum non? Quibusdam a voluptas earum facere vel!</p>
+   </div>
+
 
 
 </body>
