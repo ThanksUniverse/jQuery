@@ -75,7 +75,7 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 105px;
+	top: 128px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
@@ -734,4 +734,12 @@ a {
 	background-color: rgb(202, 202, 202);
 	filter: brightness(110%);
 	transform: translateY(-1px);
+}
+
+::placeholder {
+	color: #fff;
+}
+
+#email {
+	position: relative;
 }

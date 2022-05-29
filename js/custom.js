@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 	//Stretch-Link -- Torna toda área do link clicável, muito boa classe do Bootstrap
 
-	$(".featured-item h4").append('<span class="badge bg-danger">Novo</span>');
+	$(".featured-item h4").append('<span class="badge bg-danger"> Novo </span>');
 	//Append substitui ou adiciona uma tag nova depois
 	//Prepend substitui ou adiciona uma tag nova antes
 	//After adiciona um texto depois
@@ -78,6 +78,42 @@ $(document).ready(function () {
 			cursor: "pointer",
 		});
 	});
+
+	//* Callbacks
+	/*Ações que começam ao término de outra */
+	let fasttime = 1;
+	$(".featured-item:nth(1)")
+		.hide(fasttime, function () {
+			//* Este é o callback
+			console.log($(this).find("h4").text() + "esgotado");
+		})
+		.show(fasttime, function () {
+			console.log($(this).find(" h4 ").text() + "em estoque");
+		});
+
+	/*
+	 * Animações
+	 */
+
+	let time = 800;
+
+	$("#form-submit").on("click", function (e) {
+		e.preventDefault();
+
+		if ($("#email").val() != "") {
+			$("#email").animate(
+				{
+					top: "-50",
+				},
+				time,
+				function () {
+					console.log($(this).val());
+				}
+			);
+		}
+	});
+	/* let time = 2000;
+	$(".featured-item:nth(0)").hide(time).show(time).fadeOut(time).fadeIn(time).toggle(time); */
 });
 
 /* for (let i = 0; i < titulos.length; i++) {
