@@ -117,6 +117,7 @@ $(document).ready(function () {
 
 	/*
 	 * Copia o conteúdo do ID que a gente clicar e adiciona ao (.nav-modal-open)
+	 * Vulgo campos dinâmicos, coisa muito legal, adicionar ao ToDO
 	 */
 	$(".nav-modal-open").on("click", function (e) {
 		e.preventDefault();
@@ -131,6 +132,54 @@ $(document).ready(function () {
 
 		myModal.show();
 	});
+
+	/*
+	 *	Verificação antes de enviar o formulário
+	 */
+
+	$("body").on("submit", ".modal-body .form", function (e) {
+		e.preventDefault();
+
+		const inputName = $("#nome"); //* Criar constante porque o valor dela não irá mudar
+		const inputEmail = $("#email");
+
+		validate(inputName)
+		validate(inputEmail)
+
+		if (inputEmail.hasClass("invalid") || inputName.hasClass("invalid")) {
+			console.log('Verificar os Campos obrigatórios')
+			return false;
+		} else {
+			$(this).submit();
+		}
+	});
+
+	//* Verifica nome e adiciona class invalid se não estiver completo
+
+	$("body").on("blur", "#nome", function () {
+		validate($(this));
+	});
+	//* Verifica email e adiciona class invalid se não estiver completo
+
+	$("body").on("blur", "#email", function () {
+		validate($(this));
+	});
+
+	//* Função de Validação do formulário
+	
+	function validate(data) {
+		if (data.val() == "") {
+			$(this).addClass("invalid");
+
+			console.log("O campo de " + data.attr('name') + " é obrigatório");
+
+			data.addClass('invalid')
+
+			return false;
+		} else {
+			data.removeClass('invalid')
+		}
+	}
 });
 
 console.log($("h4").text()); //*Forma insegura de utilizar o jQuery pois pode conflitar com outras bibliotecas em projetos maiores
@@ -163,3 +212,24 @@ console.log($("h4").text()); //*Forma insegura de utilizar o jQuery pois pode co
 		"text-align": "center",
 		"background-color": "wheat",
 	}); */
+
+/* if (inputName.val() == "") {
+			inputName.addClass("invalid");
+			console.log("O campo de nome é obrigatório");
+
+			return false;
+		}
+
+		if (inputEmail.val() == "") {
+			inputEmail.addClass("invalid");
+			console.log("O campo de email é obrigatório");
+
+			return false;
+		} */
+
+/* 	if ($(this).val() == "") {
+			$(this).addClass("invalid");
+			console.log("O campo de nome é obrigatório");
+
+			return false;
+		} */
