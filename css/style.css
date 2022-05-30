@@ -747,3 +747,7 @@ a {
 .invalid {
 	border-color: #f00;
 }
+
+.text-muted {
+	display: none;
+}

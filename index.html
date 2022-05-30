@@ -253,18 +253,10 @@
 
 
 
-   <!--Scripts-->
-   <div>
-      <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
-      <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-      <script src="./vendor/owl/js/owl.js"></script>
-      <script src="./vendor/fontawesome/js/all.min.js"></script>
-      <!--Carregar o nosso jQuery custom depois da biblioteca-->
-      <script src="./js/custom.js"></script>
-   </div>
+   
 
 
-   <!-- Modal -->
+   <!-- Auto Change Modal -->
    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
@@ -284,7 +276,7 @@
    </div>
 
 
-
+   <!--ToBeChanged Modal-->
    <div id="contato" class="visually-hidden">
 
       <form action="" class="form">
@@ -303,8 +295,42 @@
             <small id="helpemail" class="text-muted">Digite um email válido</small>
          </div>
 
-         <div>
+         <div class="mb-3">
+            <label for="date" class="form-label">Data</label>
+            <input type="text" name="date" id="date" class="form-control" placeholder="Digite uma data válida"
+               aria-describedby="helpDate">
+            <small id="helpDate" class="text-muted">Digite uma data válido</small>
+         </div>
 
+         <div class="mb-3">
+            <label for="time" class="form-label">Time</label>
+            <input type="text" name="time" id="time" class="form-control" placeholder="Digite a hora"
+               aria-describedby="helpTime">
+            <small id="helpTime" class="text-muted">Digite um tempo válido</small>
+         </div>
+         
+         <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu cep"
+               aria-describedby="helpCEP">
+            <small id="helpCEP" class="text-muted">Digite um cep válido</small>
+         </div>
+
+         <div class="mb-3">
+            <label for="phone" class="form-label">Celular</label>
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="Digite o número de seu celular"
+               aria-describedby="helpCelular">
+            <small id="helpCelular" class="text-muted">Digite um telefone válido</small>
+         </div>
+
+         <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF"
+               aria-describedby="helpCPF">
+            <small id="helpCPF" class="text-muted">Digite seu cpf</small>
+         </div>
+
+         <div>
             <button type="submit" class="btn btn-success">Enviar</button>
          </div>
 
@@ -320,7 +346,17 @@
    </div>
 
 
-
+<!--Scripts-->
+   <div>
+      <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+      <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
+      <!--Style-->
+      <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="./vendor/owl/js/owl.js"></script>
+      <script src="./vendor/fontawesome/js/all.min.js"></script>
+      <!--Carregar o nosso jQuery custom depois da biblioteca-->
+      <script src="./js/custom.js"></script>
+   </div>
 </body>
 
 </html>

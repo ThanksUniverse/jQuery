@@ -165,6 +165,31 @@ $(document).ready(function () {
 		validate($(this));
 	});
 
+	$("body").on("blur", "#date", function () {
+		validate($(this));
+		$(this).mask("00/00/0000");
+	});
+
+	$("body").on("blur", "#time", function () {
+		validate($(this));
+		$(this).mask("00:00");
+	});
+
+	$("body").on("blur", "#phone", function () {
+		validate($(this));
+		$(this).mask("0000-0000");
+	});
+
+	$("body").on("blur", "#cep", function () {
+		validate($(this));
+		$(this).mask("00000-000");
+	});
+
+	$("body").on("blur", "#cpf", function () {
+		validate($(this));
+		$(this).mask("000.000.000-00");
+	});
+
 	//* Função de Validação do formulário
 	
 	function validate(data) {
@@ -173,16 +198,23 @@ $(document).ready(function () {
 
 			console.log("O campo de " + data.attr('name') + " é obrigatório");
 
+			data.parent().find('.text-muted').show()
+
 			data.addClass('invalid')
 
 			return false;
 		} else {
+			data.parernt().find('.text-muted').hide()
 			data.removeClass('invalid')
 		}
-	}
+	}	
+
 });
 
 console.log($("h4").text()); //*Forma insegura de utilizar o jQuery pois pode conflitar com outras bibliotecas em projetos maiores
+
+//TODO: Verificar se o nome é válido ( mais de 2 caracteres )
+//TODO: Verificar se o email é válido ( ao menos um "@" e um "." )
 
 /* let time = 2000;
 	$(".featured-item:nth(0)").hide(time).show(time).fadeOut(time).fadeIn(time).toggle(time); */
