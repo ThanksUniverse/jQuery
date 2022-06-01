@@ -165,6 +165,11 @@ $(document).ready(function () {
 		validate($(this));
 	});
 
+
+	$('body').on('focus', '#date', function() {
+		$(this).datepicker()
+	})
+
 	$("body").on("blur", "#date", function () {
 		validate($(this));
 		$(this).mask("00/00/0000");
@@ -204,7 +209,7 @@ $(document).ready(function () {
 
 			return false;
 		} else {
-			data.parernt().find('.text-muted').hide()
+			data.parent().find('.text-muted').hide()
 			data.removeClass('invalid')
 		}
 	}	
