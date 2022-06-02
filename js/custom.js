@@ -363,11 +363,10 @@ console.log(randomColor)
 		$("#progressbar").progressbar({
 			value: random
 		})
-		if (random >= 1) {
-			$("body").css({
-				"background-color": "#FFD700 !important",
-			});
+		if (random >= 99) {
+				alert('Congratulations')
+			};
 		}
-	});
+	);
 
 console.log($("h4").text()); //*Forma insegura de utilizar o jQuery pois pode conflitar com outras bibliotecas em projetos maiores
